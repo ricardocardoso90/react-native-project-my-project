@@ -1,4 +1,4 @@
-# Projeto My Project
+# Projeto: My Project
 
 **Tecnologias utilizadas:**
 
