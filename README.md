@@ -3,7 +3,7 @@
 **Tecnologias utilizadas:**
 
 - [Expo]()
-- [Typescript]()
+- [Javascript]()
 - [React Native]()
 - [React Navigation]()
 - [Expo Vector Icons]()
