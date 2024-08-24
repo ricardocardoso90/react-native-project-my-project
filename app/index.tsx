@@ -1,22 +1,7 @@
-import {
-  StyleSheet,
-  View
-} from "react-native";
-
-import { Routes } from "../Routes";
+import { Routes } from "@/src/routes";
 
 export default function Index() {
   return (
-    <View style={styles.container}>
-      <Routes />
-    </View>
+    <Routes />
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  }
-});

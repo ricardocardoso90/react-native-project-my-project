@@ -1,12 +1,13 @@
-# Projeto: My Project
+## Projeto: My Project
 
 **Tecnologias utilizadas:**
 
 - [Expo]()
 - [Typescript]()
 - [React Native]()
+- [Phosphor React]()
+- [Async Storage]()
 - [React Navigation]()
-- [Expo Vector Icons]()
 
 ## Instalação:
 
