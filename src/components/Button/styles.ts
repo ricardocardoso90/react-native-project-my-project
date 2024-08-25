@@ -6,13 +6,21 @@ export const styles = StyleSheet.create({
     height: 50,
     width: '100%',
     borderRadius: 4,
-    backgroundColor: colors.COLORS.RED,
+    marginTop: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 20,
-    padding: 10,
+    backgroundColor: colors.COLORS.GREEN_700,
   },
-  title: {
 
+  container2: {
+    height: 50,
+    width: '100%',
+    borderRadius: 4,
+    marginTop: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'transparent',
+    borderWidth: 1,
+    borderColor: colors.COLORS.GREEN_500,
   }
 });

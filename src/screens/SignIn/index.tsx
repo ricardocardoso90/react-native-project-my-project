@@ -1,26 +1,53 @@
-import { Button } from "@/src/components/Button";
 import { styles } from "./styles";
-import { Text, TextInput, View } from "react-native";
+import colors from "@/src/styles/colors";
+import { useNavigation } from "@react-navigation/native";
+import { ScrollView, Text, TextInput, View } from "react-native";
+
+import { Button } from "@/src/components/Button";
 
 export function SignIn() {
+  const navigation = useNavigation<any>();
+
+  function handleSignUp() {
+    navigation.navigate("signUp");
+  };
+
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.title}>IGNITE GYM</Text>
-        <Text style={styles.subtitle}>Treine a sua mente e seu corpo</Text>
-      </View>
+      <ScrollView>
+        <View style={styles.header}>
+          <Text style={styles.headerTitle}>IGNITE GYM</Text>
+          <Text style={styles.headerSubtitle}>Treine a sua mente e seu corpo</Text>
+        </View>
 
-      <View style={styles.form}>
-        <TextInput style={styles.input} placeholder="E-mail" />
-        <TextInput style={styles.input} placeholder="E-mail" />
+        <View style={styles.form}>
+          <Text style={styles.formTitle}>Acesse sua conta</Text>
 
-        <Button title="Avançar" />
-      </View>
+          <TextInput
+            style={styles.input}
+            placeholder="E-mail"
+            placeholderTextColor={colors.COLORS.GRAY_300}
+          />
 
-      <View style={styles.footer}>
-        <Text style={styles.title}>Ainda não te acesso?</Text>
-        <Button title="Cadastrar" />
-      </View>
+          <TextInput
+            style={styles.input}
+            placeholder="Senha"
+            placeholderTextColor={colors.COLORS.GRAY_300}
+          />
+
+          <Button title="Avançar" />
+        </View>
+
+        <View style={styles.footer}>
+          <Text style={styles.footerTitle}>Ainda não te acesso?</Text>
+
+          <Button
+            title="Criar conta"
+            variant="outline"
+            onPress={handleSignUp}
+          />
+        </View>
+      </ScrollView>
     </View>
   )
 };
