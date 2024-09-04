@@ -1,10 +1,10 @@
-import colors from "@/src/styles/colors";
+import theme from "@/src/styles/theme";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.COLORS.GRAY_700,
+    backgroundColor: theme.COLORS.GRAY_700,
   },
 
   header: {
@@ -13,11 +13,11 @@ export const styles = StyleSheet.create({
   },
 
   headerTitle: {
-    color: colors.COLORS.WHITE,
+    color: theme.COLORS.WHITE,
   },
 
   headerSubtitle: {
-    color: colors.COLORS.GRAY_100,
+    color: theme.COLORS.GRAY_100,
   },
 
   form: {
@@ -28,8 +28,8 @@ export const styles = StyleSheet.create({
 
   formTitle: {
     alignItems: 'center',
-    color: colors.COLORS.WHITE,
-    fontSize: colors.FONT_SIZE.MD,
+    color: theme.COLORS.WHITE,
+    fontSize: theme.FONT_SIZE.MD,
   },
 
   input: {
@@ -37,8 +37,8 @@ export const styles = StyleSheet.create({
     marginTop: 20,
     padding: 10,
     borderRadius: 4,
-    fontSize: colors.FONT_SIZE.MD,
-    backgroundColor: colors.COLORS.GRAY_600,
+    fontSize: theme.FONT_SIZE.MD,
+    backgroundColor: theme.COLORS.GRAY_600,
   },
 
   footer: {
@@ -49,6 +49,6 @@ export const styles = StyleSheet.create({
   },
 
   footerTitle: {
-    color: colors.COLORS.WHITE,
+    color: theme.COLORS.WHITE,
   }
 });

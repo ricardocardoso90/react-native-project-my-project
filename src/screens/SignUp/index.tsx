@@ -1,5 +1,5 @@
 import { styles } from "./styles";
-import colors from "@/src/styles/colors";
+import theme from "@/src/styles/theme";
 import { useNavigation } from "@react-navigation/native";
 import { ScrollView, Text, TextInput, View } from "react-native";
 
@@ -16,7 +16,7 @@ export function SignUp() {
     <View style={styles.container}>
       <ScrollView>
         <View style={styles.header}>
-          <Text style={styles.headerTitle}>IGNITE GYM</Text>
+          <Text style={styles.headerTitle}>SPACE APP</Text>
           <Text style={styles.headerSubtitle}>Treine a sua mente e seu corpo</Text>
         </View>
 
@@ -26,25 +26,25 @@ export function SignUp() {
           <TextInput
             style={styles.input}
             placeholder="Nome"
-            placeholderTextColor={colors.COLORS.GRAY_300}
+            placeholderTextColor={theme.COLORS.GRAY_300}
           />
 
           <TextInput
             style={styles.input}
             placeholder="E-mail"
-            placeholderTextColor={colors.COLORS.GRAY_300}
+            placeholderTextColor={theme.COLORS.GRAY_300}
           />
 
           <TextInput
             style={styles.input}
             placeholder="Senha"
-            placeholderTextColor={colors.COLORS.GRAY_300}
+            placeholderTextColor={theme.COLORS.GRAY_300}
           />
 
           <TextInput
             style={styles.input}
             placeholder="Confirme a Senha"
-            placeholderTextColor={colors.COLORS.GRAY_300}
+            placeholderTextColor={theme.COLORS.GRAY_300}
           />
 
           <Button title="Criar e acessar" />

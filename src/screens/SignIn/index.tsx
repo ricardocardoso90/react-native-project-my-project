@@ -1,41 +1,85 @@
 import { styles } from "./styles";
-import colors from "@/src/styles/colors";
+import theme from "@/src/styles/theme";
 import { useNavigation } from "@react-navigation/native";
 import { ScrollView, Text, TextInput, View } from "react-native";
+import { Controller, useForm } from "react-hook-form";
 
 import { Button } from "@/src/components/Button";
+import { AuthRoutesProps } from "@/src/routes/auth.routes";
+
+type InputSignIn = {
+  email: string;
+  password: string;
+};
 
 export function SignIn() {
-  const navigation = useNavigation<any>();
+  const navigation = useNavigation<AuthRoutesProps>();
+  const { control, handleSubmit, formState: { errors } } = useForm<InputSignIn>();
 
   function handleSignUp() {
     navigation.navigate("signUp");
+  };
+
+  function handleSignIn({ email, password }: InputSignIn) {
+    console.log({
+      email,
+      password
+    })
   };
 
   return (
     <View style={styles.container}>
       <ScrollView>
         <View style={styles.header}>
-          <Text style={styles.headerTitle}>IGNITE GYM</Text>
+          <Text style={styles.headerTitle}>SPACE APP</Text>
           <Text style={styles.headerSubtitle}>Treine a sua mente e seu corpo</Text>
         </View>
 
         <View style={styles.form}>
           <Text style={styles.formTitle}>Acesse sua conta</Text>
 
-          <TextInput
-            style={styles.input}
-            placeholder="E-mail"
-            placeholderTextColor={colors.COLORS.GRAY_300}
+          <Controller
+            control={control}
+            name="email"
+            rules={{
+              required: "Informe seu e-mail!"
+            }}
+            render={({ field: { value, onChange } }) => (
+              <TextInput
+                style={styles.input}
+                placeholder="E-mail"
+                onChangeText={onChange}
+                value={value}
+                placeholderTextColor={theme.COLORS.GRAY_300}
+              />
+            )}
           />
+          <Text style={{ color: theme.COLORS.RED }}>{errors.email?.message}</Text>
 
-          <TextInput
-            style={styles.input}
-            placeholder="Senha"
-            placeholderTextColor={colors.COLORS.GRAY_300}
+          <Controller
+            control={control}
+            name="password"
+            rules={{
+              required: "Informe sua senha!"
+            }}
+            render={({ field: { value, onChange } }) => (
+              <TextInput
+                style={styles.input}
+                placeholder="Senha"
+                onChangeText={onChange}
+                value={value}
+                secureTextEntry
+                returnKeyType="send"
+                placeholderTextColor={theme.COLORS.GRAY_300}
+              />
+            )}
           />
+          <Text style={{ color: theme.COLORS.RED }}>{errors.password?.message}</Text>
 
-          <Button title="Avançar" />
+          <Button
+            title="Avançar"
+            onPress={handleSubmit(handleSignIn)}
+          />
         </View>
 
         <View style={styles.footer}>

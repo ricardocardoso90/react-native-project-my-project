@@ -1,5 +1,5 @@
 import { styles } from "./styles";
-import colors from "@/src/styles/colors";
+import theme from "@/src/styles/theme";
 import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
 
 type ButtonProps = TouchableOpacityProps & {
@@ -19,8 +19,8 @@ export function Button({ title, variant = "solid", ...rest }: ButtonProps) {
       <Text style={
         {
           color: variant === 'outline'
-            ? colors.COLORS.GREEN_500
-            : colors.COLORS.WHITE
+            ? theme.COLORS.BLUE_100
+            : theme.COLORS.WHITE
         }}
       >
         {title}

@@ -1,0 +1,72 @@
+{
+  "planets_environments": [
+    {"key": "terra", "title": "Terra"},
+    {"key": "vênus", "title": "Vênus"},
+    {"key": "marte", "title": "Marte"},
+    {"key": "júpiter", "title": "Júpiter"},
+    {"key": "mercúrio", "title": "Mercúrio"},
+    {"key": "saturno", "title": "Saturno"},
+    {"key": "netuno", "title": "Netuno"},
+    {"key": "urano", "title": "Urano"}
+  ],
+
+  "planets": [
+    {
+      "id": 1,
+      "name": "Terra 1",
+      "about": "Exemplo de imagem da Terra",
+      "photo": "https://i.pinimg.com/originals/3a/f6/03/3af603454a046931be8dc11fb9089238.jpg",
+      "environments": "terra"
+    },
+    {
+      "id": 2,
+      "name": "Terra 2",
+      "about": "Exemplo de imagem da Terra",
+      "photo": "https://i.pinimg.com/originals/04/82/cc/0482cc50425dbc8056b6ffc403225d94.jpg",
+      "environments": "terra"
+    },
+    {
+      "id": 3,
+      "name": "Terra 3",
+      "about": "Exemplo de imagem da Terra",
+      "photo": "https://i.pinimg.com/originals/62/e4/d0/62e4d06c0c38a1aba89f789a684853b0.jpg",
+      "environments": "terra"
+    },
+    {
+      "id": 4,
+      "name": "Terra 4",
+      "about": "Exemplo de imagem da Plutão",
+      "photo": "https://i.pinimg.com/originals/7d/28/51/7d28512c193300871646afd8d53fae30.jpg",
+      "environments": "terra"
+    },
+
+    {
+      "id": 5,
+      "name": "Marte 1",
+      "about": "Exemplo de imagem de Marte",
+      "photo": "https://i.pinimg.com/originals/7d/28/51/7d28512c193300871646afd8d53fae30.jpg",
+      "environments": "marte"
+    },
+    {
+      "id": 6,
+      "name": "Marte 2",
+      "about": "Exemplo de imagem de Marte",
+      "photo": "https://i.pinimg.com/originals/7d/28/51/7d28512c193300871646afd8d53fae30.jpg",
+      "environments": "marte"
+    },
+    {
+      "id": 7,
+      "name": "Marte 3",
+      "about": "Exemplo de imagem de Marte",
+      "photo": "https://i.pinimg.com/originals/7d/28/51/7d28512c193300871646afd8d53fae30.jpg",
+      "environments": "marte"
+    },
+    {
+      "id": 8,
+      "name": "Marte 4",
+      "about": "Exemplo de imagem de Marte",
+      "photo": "https://i.pinimg.com/originals/7d/28/51/7d28512c193300871646afd8d53fae30.jpg",
+      "environments": "marte"
+    }
+  ]
+}
